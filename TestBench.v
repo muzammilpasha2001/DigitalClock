@@ -8,7 +8,10 @@ module tb_clock;
     wire [5:0] seconds;
     wire [5:0] minutes;
     wire [4:0] hours;
-
+initial begin
+$dumpfile("my.vcd");
+$dumpvars;
+end
     // Instantiate the Unit Under Test (UUT)
     Digital_Clock uut (
         .Clk_1sec(Clk_1sec), 
